@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Platform } from 'react-native';
-import { View, StyleSheet, TextInput, Text, ScrollView, KeyboardAvoidingView } from 'react-native'
+import { View, StyleSheet, TextInput, Text, ScrollView, KeyboardAvoidingView, Platform } from 'react-native'
 
 export default function FeedbackForm() {
     const [firstName, chageFirstName] = useState()
@@ -18,6 +17,7 @@ export default function FeedbackForm() {
                     to hear your experience with us!
                 </Text>
                 <TextInput
+                    secureTextEntry={true}
                     value={firstName}
                     onChangeText={chageFirstName}
                     placeholder={'First Name'}
@@ -36,6 +36,7 @@ export default function FeedbackForm() {
                 <TextInput
                     value={message}
                     onChangeText={chagemessage}
+                    numberOfLines={4}
                     placeholder={'Please leave feedback'} 
                     style={styles.messageInput}
                 />
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#F4CE14',
     },
     messageInput: {
-        height: 100,
+        maxHeight: 100,
         margin: 12,
         borderWidth: 1,
         padding: 10,
