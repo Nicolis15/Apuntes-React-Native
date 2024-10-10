@@ -23,12 +23,12 @@ export function LoginScreen(){
                     clearButtonMode = "always"
                 />
                 <TextInput
-                value = {password}
-                placeholder={'Contraseña'}
-                onChachePassword = {onChachePassword}
-                secureTextEntry = {true}
-                keyboardType = {'default'}
-                style = {styles.inputBox}
+                  value = {password}
+                  placeholder={'Contraseña'}
+                  onChachePassword = {onChachePassword}
+                  secureTextEntry = {true}
+                  keyboardType = {'default'}
+                  style = {styles.inputBox}
                 />
 
             </ScrollView>
